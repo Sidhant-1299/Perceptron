@@ -73,7 +73,7 @@ class Perceptron:
         """Return class label after unit step"""
         return np.where(self.net_input(X) > 0,1,0)
     
-    def export_weight(self,filename = 'weights.txt'):
+    def export_weights(self,filename = 'weights.txt'):
         mat = np.matrix(self.w_)
         with open(filename,'wb') as f:
             for line in mat:
