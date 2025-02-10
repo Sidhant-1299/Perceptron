@@ -58,7 +58,7 @@ class Perceptron:
                 self.w_ +=  update*Xi
                 self.b_ += update
                 errors += (update != 0)
-                self.error_.append(errors)
+            self.error_.append(errors)
         return self
     
 
@@ -67,7 +67,7 @@ class Perceptron:
         Calculate net input
         wTx + b
         """
-        return np.dot(self.w_,X) + self.b_
+        return np.dot(X,self.w_) + self.b_
     
     def predict(self,X):
         """Return class label after unit step"""
